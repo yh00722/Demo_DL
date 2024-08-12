@@ -6,7 +6,7 @@ def create_dataset_df(directory, skip_filename="LICENSE.txt"):
     path = Path(directory)
     title_list = []
     data = []
-    for subdir in path.glob('*'):  # 使用 rglob 或 glob 根据需要
+    for subdir in path.glob('*'):
         if subdir.is_dir():
             title_list.append(subdir.name)
             for file in subdir.glob('*.txt'):
